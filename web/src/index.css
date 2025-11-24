@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@theme {
+  --opacity-2: 0.02;
+
+  --text-xxs: 0.625rem;
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  --shadow-shape: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+
+  --shadow-shape-content: 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.02),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.02);
+
+  --animate-border: border 4s linear infinite;
+
+  --font-xxs: 0.625rem;
+
+  @keyframes border {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+}
